@@ -1,0 +1,10 @@
+# Initialize conda enviroment with: 
+#     conda env create -f ste_environment.yml
+# Use the environement with:
+#     conda activate ste
+#     conda deactivate
+
+name: ste_NLDL
+dependencies:
+- python=3.11
+- pip

@@ -1,0 +1,32 @@
+meta:
+  name: test DRL
+methods:
+  policy: -1
+  environment: -1
+  observationmodel: 2
+  bayes: 0
+domain:
+  Ndim: 3
+  Ngrid: 3 # test if this should be odd in otto
+  V: 0
+  D: 1
+  flux_range: [2]
+  agent: null
+  source: null
+  belief_criteria: 0.9
+nn:
+  fc_layers: 3 # number of hidden layers
+  fc_units: 512 # number of units per layer
+  cnn_layers: 0
+  cnn_filters: [8, 16]
+  cnn_kernel_size: [1, 3]
+  learning_rate: 0.3
+  memory_size: 1000 # number of transitions (s, s') to keep in memory
+  stop_t: 15
+  e_greedy_floor: 0.1
+  e_greedy_0: 0.5
+  e_greedy_decay: 10000 # time scale for eps decay, in nr of training iterations
+  algo_max_it: 100000 # max number of training iterations
+  evaluate_performance_every: 1000
+  model_path: none
+  n_parallel: 1 # -1 for using all cores, 1 for sequential

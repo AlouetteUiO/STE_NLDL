@@ -1,0 +1,19 @@
+meta:
+  name: test 3D
+methods:
+  policy: 0
+  environment: 0
+  observationmodel: 2
+  bayes: 0
+domain:
+  Ndim: 3
+  Ngrid: 3
+  V: 0
+  D: 1
+  flux_range: [2]
+  agent: null
+  source: null
+  belief_criteria: 0.9
+  stay: False
+nn:
+  stop_t: 10

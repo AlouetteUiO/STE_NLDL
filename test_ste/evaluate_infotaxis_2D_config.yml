@@ -1,0 +1,19 @@
+meta:
+  name: test 2D
+methods:
+  policy: 0
+  environment: 0
+  observationmodel: 2
+  bayes: 0
+domain:
+  Ndim: 2
+  Ngrid: 5
+  V: 0
+  D: 1
+  flux_range: [1]
+  agent: null
+  source: null
+  belief_criteria: 0.9
+  stay: True
+nn:
+  stop_t: 10

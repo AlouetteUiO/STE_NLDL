@@ -1,0 +1,46 @@
+meta:
+  name: conv3D, reward every step
+methods:
+  policy: -1
+  environment: -1
+  observationmodel: 2
+  bayes: 0
+domain:
+  Ndim: 2
+  Ngrid: 11
+  V: 2
+  D: 2
+  flux: null
+  flux_range: [1, 2, 3, 4, 5]
+  agent: null
+  source: null
+  belief_criteria: 0.5 # consider the problem to be converged if the belief is >= belief_criteria on one of the nodes
+  stay: True 
+nn:
+  fc_layers: 0 # number of hidden layers
+  fc_units: 32 # number of units per layer
+  cnn_layers: 4
+  cnn_filters: [32, 32, 32, 32]
+  cnn_kernel_size: [3, 3, 3, 3]
+  pooling: True
+  pooling_kernel_size: 2
+  pooling_strides: 2
+  reg_factor: 0
+  learning_rate: 0.00025 
+  memory_size: 1000 # number of transitions (s, s') to keep in memory
+  stop_t: 20 # max steps of agent in episode
+  random_episodes: 0
+  e_greedy_floor: 0.01
+  e_greedy_0: 1.0
+  e_greedy_decay: 5000 # time scale for eps decay, in nr of training iterations
+  algo_max_it: 20000 # max number of training iterations
+  evaluate_performance_every: 200  
+  evaluate_performance_stats_every: 500 
+  model_path: none
+  n_parallel: 1 
+  save_model_every: 100
+  n_runs_stats: 5000
+  update_frozen_model_every: 1 
+  batch_size: 128 
+  n_gd_steps: 12
+  replay_ntimes: 4
